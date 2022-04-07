@@ -49,5 +49,6 @@
     </Reference>
     <Reference Include="PresentationFramework" />
 	<Reference Include="System.Runtime" />
+	<Reference Include="System.Private.CoreLib" />
   </ItemGroup>
 </Project>

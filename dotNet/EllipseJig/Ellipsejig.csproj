@@ -27,5 +27,6 @@
 	<Reference Include="mscorlib" />
     <Reference Include="System.Private.CoreLib" />
     <Reference Include="System.Runtime" />
+	<Reference Include="PresentationFramework" />
   </ItemGroup>
 </Project>
