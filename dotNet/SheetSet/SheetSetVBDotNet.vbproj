@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>    
+    <OutputType>Library</OutputType>
+    <RootNamespace>SheetSetVBDotNet</RootNamespace>
+    <AssemblyName>SheetSetVBDotNet</AssemblyName>  
+	<TargetFramework>net6.0</TargetFramework>	
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.WindowsDesktop.App" />
+    <Reference Include="AcDbMgd">
+      <Name>AcDbMgd</Name>
+      <HintPath>..\..\..\inc\AcDbMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acmgd">
+      <Name>acmgd</Name>
+	  <HintPath>..\..\..\inc\acmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="accoremgd">
+	  <HintPath>..\..\..\inc\accoremgd.dll</HintPath>
+      <Name>accoremgd</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ACSMCOMPONENTS24Lib">
+      <Guid>{7CC328B4-EB05-4611-B602-D23EAEAD2B2E}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+	  <Private>True</Private>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild">
+    <Exec Command="attrib -r &quot;$(TargetDir)Interop.ACSMCOMPONENTS24Lib.dll&quot;" />
+    <Exec Command="corflags /32bit- &quot;$(TargetDir)Interop.ACSMCOMPONENTS24Lib.dll&quot;" />
+  </Target>
+</Project>

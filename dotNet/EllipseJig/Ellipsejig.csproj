@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>    
+    <AssemblyName>JigSample</AssemblyName>    
+    <OutputType>Library</OutputType>
+    <RootNamespace>JigSample</RootNamespace> 
+	<TargetFramework>net6.0</TargetFramework>
+	<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+	<Deterministic>false</Deterministic>	
+	<BaseOutputPath>bin\</BaseOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AcDbMgd">
+      <Name>AcDbMgd</Name>
+      <HintPath>..\..\..\inc\AcDbMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acmgd">
+      <Name>acmgd</Name>
+	  <HintPath>..\..\..\inc\acmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="accoremgd">
+	  <HintPath>..\..\..\inc\accoremgd.dll</HintPath>
+      <Name>accoremgd</Name>
+      <Private>False</Private>
+    </Reference>
+	<Reference Include="mscorlib" />
+    <Reference Include="System.Private.CoreLib" />
+    <Reference Include="System.Runtime" />
+  </ItemGroup>
+</Project>

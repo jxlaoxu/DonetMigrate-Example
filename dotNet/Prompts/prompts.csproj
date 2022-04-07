@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Prompts</AssemblyName>    
+    <OutputType>Library</OutputType>
+    <RootNamespace>Prompts</RootNamespace>
+	<TargetFramework>net6.0</TargetFramework>
+	<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+	<Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AcDbMgd">
+      <Name>AcDbMgd</Name>
+      <HintPath>..\..\..\inc\AcDbMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acmgd">
+      <Name>acmgd</Name>
+	  <HintPath>..\..\..\inc\acmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="accoremgd">
+	  <HintPath>..\..\..\inc\accoremgd.dll</HintPath>
+      <Name>accoremgd</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

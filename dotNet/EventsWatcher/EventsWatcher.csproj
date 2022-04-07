@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>    
+    <ApplicationIcon>watcher.ico</ApplicationIcon>    
+    <AssemblyName>EventsWatcher</AssemblyName>  
+    <OutputType>Library</OutputType>
+    <RootNamespace>EventsWatcher</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
+	<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+	<Deterministic>false</Deterministic>
+	<BaseOutputPath>bin\</BaseOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Resources.Extensions" Version="6.0.0" />
+	<FrameworkReference Include="Microsoft.WindowsDesktop.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AcDbMgd">
+      <Name>AcDbMgd</Name>
+      <HintPath>..\..\..\inc\AcDbMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acmgd">
+      <Name>acmgd</Name>
+	  <HintPath>..\..\..\inc\acmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="accoremgd">
+	  <HintPath>..\..\..\inc\accoremgd.dll</HintPath>
+      <Name>accoremgd</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+	<Reference Include="System.Runtime" />
+  </ItemGroup>
+</Project>
