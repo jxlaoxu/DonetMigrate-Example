@@ -59,5 +59,6 @@
     <Import Include="System.Collections" />
     <Import Include="System.Data" />
     <Import Include="System.Diagnostics" />
+	<Import Include="System.Drawing" />
   </ItemGroup>
 </Project>
